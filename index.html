@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>ChatApp</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="public/css/stylesheet.css">
+    </head>
+
+    <body>
+      <audio src="public/sounds/mouette.mp3" id="mouette"></audio>
+      <audio src="public/sounds/cougar.mp3" id="cougar"></audio>
+
+      <div class="container">
+          <header class="page-header text-center">
+              <h1>Welcome on ChatApp</h1>
+          </header>
+      </div>
+
+      <div class="container">
+          <div id="espaceConnexion" class="row">
+              <div class="col-md-6 col-md-offset-3 well">
+                  <h4 class="text-center"> Your Name </h4>
+                  <form id="formConnexion" onsubmit="return false" class="form-group">
+                      <input type="text" class="form-control input-lg" name="nouveauPseudo" id="nouveauPseudo" autofocus/>
+                      </br>
+                      <input type="submit" class="btn btn-primary btn-lg btn-block" value="Connect" id="connecter" />
+                  </form>
+              </div>
+          </div>
+
+      <div id="espaceChat" class="row">
+          <div class="row col-md-4">
+              <div id="messageForm">
+                  <div class="col-md-12 col-xs-6">
+                    <div class="panel panel-primary">
+                      <div class="panel-heading">
+                        <span class="glyphicon glyphicon-pencil"></span> Type your message
+                      </div>
+                      <div class="panel-body">
+                        <form onsubmit="return false" class="form-group">
+                            <input type="text" class="form-control" id="nouveauMessage" autofocus/>
+                            </br>
+                            <input type="submit" class="btn btn-primary" value="Send to everyone" id="envoyer" />
+                            <button class="btn btn-warning" id="btnMouette">Mouette</button>
+                            <button class="btn btn-danger" id="btnCougar">Cougar</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-md-12 col-xs-6">
+                <div class=" panel panel-primary">
+                  <div class="panel-heading">
+                    <span class="glyphicon glyphicon-user"></span> Online Users
+                  </div>
+                  <div class="panel-body userHeight">
+                    <ul class="list-group" id="utilisateursConnectes"></ul>
+                </div>
+              </div>
+              </div>
+          </div>
+          <div class="col-md-7 col-md-offset-1">
+            <div class="panel panel-primary">
+              <div class="panel-heading">
+                  <span class="glyphicon glyphicon-comment"></span> Chat
+              </div>
+              <div id="conversation" class="panel-body chatHeight"></div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script src="node_modules/socket.io-client/dist/socket.io.js"></script>
+    <script src="public/js/main.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,28 @@
+#espaceChat
+{
+  visibility: hidden;
+}
+
+#conversation
+{
+  word-wrap: break-word;
+}
+
+.chatHeight
+{
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.userHeight
+{
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.msg
+{
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #B3A9A9;
+}
