@@ -10,13 +10,13 @@
 
 .chatHeight
 {
-  height: 400px;
+  height: 70vh;
   overflow-y: scroll;
 }
 
 .userHeight
 {
-  height: 200px;
+  height: 40vh;
   overflow-y: scroll;
 }
 

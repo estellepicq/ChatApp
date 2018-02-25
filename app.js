@@ -16,7 +16,7 @@ console.log('Chat is running on http://localhost:' + port);
 app.use(serveStatic(__dirname + '/'));
 app.use(serveStatic(__dirname + '/public/'));
 
-// We load index.html
+// We load index.html at root => should be set to '/chat' once on server, if url IP/chat
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html');
 });

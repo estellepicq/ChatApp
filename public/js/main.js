@@ -1,4 +1,4 @@
-var socket = io.connect('http://localhost:8080');
+var socket = io.connect('http://localhost:8080/'); //Once on the server, should be set to http://54.38.35.171/
 
 var espaceConnexionElt = document.getElementById("espaceConnexion");
 var espaceChatElt = document.getElementById("espaceChat");
@@ -55,14 +55,17 @@ document.getElementById("btnCougar").addEventListener("click", function () {
 // When we get a sound from the server, we play "data".mp3 and display an information
 socket.on('son', function(data) {
   play(data.son, this);
+  conversationElt.scrollTop = conversationElt.scrollHeight;
 });
 socket.on('messageSon', function(message) {
   addInfo(message);
+  conversationElt.scrollTop = conversationElt.scrollHeight;
 });
 
 // When we get a messageNouvelleConnexion, we add an connection information to the client page
 socket.on('messageNouvelleConnexion', function(message){
   addInfo(message);
+  conversationElt.scrollTop = conversationElt.scrollHeight;
 });
 
 // When someone connects, we display the login into "connected users" box
