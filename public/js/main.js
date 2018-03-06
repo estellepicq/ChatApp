@@ -1,4 +1,4 @@
-var socket = io.connect('http://localhost:8080/'); //Once on the server, should be set to http://54.38.35.171/
+var socket = io.connect('http://localhost:8080/'); //Once on the server, should be set to http://yourdomain.com:8080/
 
 var espaceConnexionElt = document.getElementById("espaceConnexion");
 var espaceChatElt = document.getElementById("espaceChat");
