@@ -44,11 +44,12 @@ io.sockets.on('connection', function (socket, pseudo) {
         io.sockets.emit('messageServeur', message);
     });
 
+    // OLD
     // When we get private message from client, we send it to the chosen user
-    socket.on('messagePriveClient', function(data){
-      socket.broadcast.to(data.id).emit('messagePriveServeur', data.message);
-      socket.emit('messagePriveServeur', data.message);
-    });
+    // socket.on('messagePriveClient', function(data){
+    //   socket.broadcast.to(data.id).emit('messagePriveServeur', data.message);
+    //   socket.emit('messagePriveServeur', data.message);
+    // });
 
     // When we get a boutonMouette (click on "mouette" button), we broadcast a message
     socket.on('boutonSon', function(data){

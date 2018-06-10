@@ -3,8 +3,17 @@
     "version": "1.0.0",
     "dependencies": {
         "express": "4.16.2",
-        "socket.io": "2.0.4"
+        "socket.io": "2.1.1",
+        "Weejs": "git+https://github.com/LCluber/Wee.js.git"
+    },
+    "devDependencies": {
+        "gulp": "^3.9.1",
+        "gulp-clean-css": "^3.9.2",
+        "gulp-concat": "^2.6.1",
+        "gulp-rename": "^1.2.2",
+        "gulp-uglify": "^3.0.0"
     },
     "author": "Estelle",
-    "description": "Real-time chat using socket.io"
+    "description": "Real-time chat using socket.io",
+    "license": "xxx"
 }
