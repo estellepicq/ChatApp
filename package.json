@@ -2,16 +2,17 @@
     "name": "ChatApp",
     "version": "1.0.0",
     "dependencies": {
+        "Weejs": "git+https://github.com/LCluber/Wee.js.git",
         "express": "4.16.2",
-        "socket.io": "2.1.1",
-        "Weejs": "git+https://github.com/LCluber/Wee.js.git"
+        "font-awesome": "4.7.0",
+        "socket.io": "2.1.1"
     },
     "devDependencies": {
-        "gulp": "^3.9.1",
-        "gulp-clean-css": "^3.9.2",
-        "gulp-concat": "^2.6.1",
-        "gulp-rename": "^1.2.2",
-        "gulp-uglify": "^3.0.0"
+        "gulp": "3.9.1",
+        "gulp-clean-css": "3.9.2",
+        "gulp-concat": "2.6.1",
+        "gulp-rename": "1.2.2",
+        "gulp-uglify": "3.0.0"
     },
     "author": "Estelle",
     "description": "Real-time chat using socket.io",

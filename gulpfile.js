@@ -39,17 +39,17 @@ gulp.task('sounds', () => {
   .pipe(gulp.dest(destination + '/sounds'));
 });
 
-// //Transfer css files from node_modules to dist
-// gulp.task('vendorcss', ()=> {
-//   return gulp.src(['./node_modules/bootstrap/dist/css/bootstrap.min.css', './node_modules/font-awesome/css/font-awesome.min.css', './node_modules/magnific-popup/dist/magnific-popup.css'])
-//       .pipe(gulp.dest(destination + '/css'));
-// });
+//Transfer css files from node_modules to dist
+gulp.task('vendorcss', ()=> {
+  return gulp.src('./node_modules/font-awesome/css/font-awesome.min.css')
+      .pipe(gulp.dest(destination + '/css'));
+});
 
-// //Transfer fonts from node_modules to dist
-// gulp.task('fonts', ()=> {
-//   return gulp.src('./node_modules/font-awesome/fonts/*.*')
-//       .pipe(gulp.dest(destination + '/fonts'));
-// });
+//Transfer fonts from node_modules to dist
+gulp.task('fonts', ()=> {
+  return gulp.src('./node_modules/font-awesome/fonts/*.*')
+      .pipe(gulp.dest(destination + '/fonts'));
+});
 
 //Transfer js files from node_modules to dist
 gulp.task('vendorjs', ()=> {
@@ -58,7 +58,7 @@ gulp.task('vendorjs', ()=> {
 });
 
 // Build task
-gulp.task('build', ['css', 'img', 'js', 'vendorjs', 'sounds']);
+gulp.task('build', ['css', 'img', 'js', 'vendorcss', 'vendorjs', 'sounds', 'fonts']);
 
 // Default task : build
 gulp.task('default', ['build']);
