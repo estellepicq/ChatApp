@@ -1,6 +1,6 @@
 {
     "name": "ChatApp",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "dependencies": {
         "Weejs": "git+https://github.com/LCluber/Wee.js.git",
         "express": "4.16.2",
@@ -8,9 +8,11 @@
         "socket.io": "2.1.1"
     },
     "devDependencies": {
+        "browser-sync": "2.24.4",
         "gulp": "3.9.1",
         "gulp-clean-css": "3.9.2",
         "gulp-concat": "2.6.1",
+        "gulp-nodemon": "2.2.1",
         "gulp-rename": "1.2.2",
         "gulp-uglify": "3.0.0"
     },

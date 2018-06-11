@@ -49,6 +49,10 @@ socket.on('messageServeur', function(message) {
 // When we get a sound from the server, we play 'data'.mp3 and display an information
 socket.on('son', function(data) {
   play(data.son, this);
+  conversationElt.setAttribute('class', 'col-12 wizz');
+  setTimeout(function() {
+    conversationElt.setAttribute('class', 'col-12');
+  }, 2000);  
 });
 socket.on('messageSon', function(message) {
   addInfo(message);
