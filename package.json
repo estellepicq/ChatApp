@@ -3,8 +3,10 @@
     "version": "1.2.1",
     "dependencies": {
         "Weejs": "git+https://github.com/LCluber/Wee.js.git",
+        "bootstrap": "4.1.1",
         "express": "4.16.2",
         "font-awesome": "4.7.0",
+        "jquery": "3.3.1",
         "socket.io": "2.1.1"
     },
     "devDependencies": {

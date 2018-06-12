@@ -44,7 +44,8 @@ gulp.task('sounds', () => {
 
 //Transfer css files from node_modules to dist
 gulp.task('vendorcss', ()=> {
-  return gulp.src('./node_modules/font-awesome/css/font-awesome.min.css')
+  return gulp.src(['./node_modules/font-awesome/css/font-awesome.min.css',
+                  './node_modules/bootstrap/dist/css/bootstrap.min.css'])
       .pipe(gulp.dest(destination + '/css'));
 });
 
@@ -56,7 +57,10 @@ gulp.task('fonts', ()=> {
 
 //Transfer js files from node_modules to dist
 gulp.task('vendorjs', ()=> {
-  return gulp.src(['./node_modules/socket.io-client/dist/socket.io.js', './node_modules/Weejs/dist/wee.min.js'])
+  return gulp.src(['./node_modules/socket.io-client/dist/socket.io.js',
+                  './node_modules/Weejs/dist/wee.min.js',
+                  './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+                  './node_modules/jquery/dist/jquery.min.js'])
       .pipe(gulp.dest(destination + '/js'));
 });
 
