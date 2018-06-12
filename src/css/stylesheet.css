@@ -24,6 +24,10 @@ h1 {
   border-radius: 5px;
 }
 
+.navbar {
+  width: 100%;
+}
+
 #conversation {
   word-wrap: break-word;
   height: 70vh;
@@ -31,7 +35,7 @@ h1 {
 }
 
 #messageForm input {
-   background-color: #f2f5f9;
+   background-color: #f8f9fa;
    padding-top: 15px;
    padding-bottom: 15px;
 }
@@ -49,19 +53,19 @@ h1 {
 }
 
 .msg-light {
-  background-color: #dee1e5;
+  background-color: #f8f9fa;
   color: #565759;
 }
 
 .user {
   border-radius: 5px;
-  padding: 6px;
+  padding: 6px 15px 6px 15px;
+	margin: 5px 0px 0px 5px;
 }
 
 .user-dark {
   background-color: #26a69a;
   color: white;
-  cursor: pointer;
 }
 
 .user-light {

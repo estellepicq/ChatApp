@@ -52,7 +52,7 @@ socket.on('son', function(data) {
   conversationElt.setAttribute('class', 'col-12 wizz');
   setTimeout(function() {
     conversationElt.setAttribute('class', 'col-12');
-  }, 2000);  
+  }, 2000);
 });
 socket.on('messageSon', function(message) {
   addInfo(message);
@@ -70,21 +70,24 @@ socket.on('messageNouvelleConnexion', function(message){
    var userClass = 'user pull-right mr-2';
    var iClass = '';
    utilisateursConnectesElt.innerHTML = '';
-   WEE.Dom.addHTMLElement(utilisateursConnectesElt, 'span', {content: 'Chat App'});
+   // WEE.Dom.addHTMLElement(utilisateursConnectesElt, 'span', {content: 'Chat App'});
    users.user.forEach(function(user) {
      if(user.pseudo === pseudo) {
-       userClass = 'user user-light pull-right mr-2';
+       userClass = 'btn user user-light disabled';
        iClass='';
      } else {
-       userClass = 'user user-dark pull-right mr-2';
+       userClass = 'btn user user-dark';
        iClass = 'fa fa-music ml-1';
      }
-     var loggedUser = WEE.Dom.addHTMLElement(utilisateursConnectesElt, 'span', {id: 'mouette_' + user.id, content: user.pseudo, class: userClass});
+     var liElt = WEE.Dom.addHTMLElement(utilisateursConnectesElt, 'li', {class: 'nav-item'});
+     var loggedUser = WEE.Dom.addHTMLElement(liElt, 'button', {id: 'mouette_' + user.id, content: user.pseudo, class: userClass});
      WEE.Dom.addHTMLElement(loggedUser, 'i', {class: iClass});
 
      // Click on the logged user button and send him a private sound (mouette)
      document.getElementById('mouette_' + user.id).addEventListener('click', function () {
-       socket.emit('boutonSon', {son: 'mouette', recipient: user.pseudo, recipientId: user.id});
+       if(user.pseudo !== pseudo) {
+         socket.emit('boutonSon', {son: 'mouette', recipient: user.pseudo, recipientId: user.id});
+       }
      });
 
    });

@@ -1,3 +1,7 @@
+Version 1.2.1 (12/06/2018)
+-----------------------------
+* Collapse logged users container on small screens
+
 Version 1.2.0 (11/06/2018)
 -----------------------------
 * New Gulp task: 'gulp serve' (open the app in the browser on http://localhost:3000, watch for changes in /src folder and reload the browser)
