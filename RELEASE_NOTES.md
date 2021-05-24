@@ -1,3 +1,8 @@
+Version 1.3.0 (24/05/2021)
+-----------------------------
+* Update Gulp & Gulpfile process
+* Change url for socket io
+
 Version 1.2.1 (12/06/2018)
 -----------------------------
 * Collapse logged users container on small screens
