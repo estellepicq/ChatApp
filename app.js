@@ -4,7 +4,7 @@ var fs = require('fs');
 var io = require('socket.io').listen(server);
 var serveStatic = require('serve-static');
 
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 8084;
 
 //users will store pseudo and id of connected users
 var users = {user:[]};
